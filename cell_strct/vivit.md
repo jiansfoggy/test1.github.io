@@ -1,5 +1,9 @@
 ---
 sort: 1
+
+images:
+  - https://github.com/jiansfoggy/test1.github.io/blob/develop/cell_strct/ViViT-TE.png
+  - https://github.com/jiansfoggy/test1.github.io/blob/develop/cell_strct/ViViT-FE.png
 ---
 
 # Video Vision Transformer (ViViT)
@@ -19,3 +23,8 @@ Use the ViViT-FE backbone to extract the features from the tubelets.
 </p>
 
 ![ViViT](ViViT_FE.png 'Backbone')
+
+{% for image in page.images %}
+say sth
+![test image {{ forloop.index }}]({{ image }})
+{% endfor %}
