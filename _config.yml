@@ -1,8 +1,8 @@
 title: MC-ViViT
 description: The document to introduce the MC-ViViT model.
 
-# theme: null
-theme: jekyll-rtd-theme
+theme: null
+#theme: jekyll-rtd-theme
 
 # debug:
 #   compress: true
