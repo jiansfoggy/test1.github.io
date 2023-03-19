@@ -6,6 +6,5 @@ sort: 2
 
 The follows are the changes to address the issues raised by the past works.
 
-- Propose MC-ViViT (multi-branch classifier ViViT), a Transformer-based model, to detect MCI.
-- Develop MC module to enrich the extracted spatio-temporal features. Its multi-branch structure helps ViViT to 
-capture the visual features from different perspectives.
+- New model: **MC-ViViT**, a Transformer-based model for detecting MCI.
+- New MLP module: **MC module**. It captures the visual features from different perspectives.

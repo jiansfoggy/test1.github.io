@@ -36,7 +36,34 @@ theme after converting from videos to frames.
 | Frame Number   | 691872         | 859872            | 770656       | 797968          |
 
 We used sequence-based approaches rather than frame-based ones to load the dataset, and extracted facial features via a 
-dynamic approach. The response variable is boolean value. $1$ represents NC. $0$ denotes MCI.
+dynamic approach. The response variable is boolean value. `1` represents NC. `0` denotes MCI.
 
 # Data Processing
 
+The facial features of Interviewees are valuable to our research.  
+However, every video has complex background and interviewers' face, which has negative influence on predicting results.
+To address this problem, we created the following cleaning instructions.
+
+> 1. Drop the first 3 minutes and the last 2.5 minutes of each video. 
+> 2. Apply EasyOCR[[Code](https://github.com/JaidedAI/EasyOCR)][[Demo](https://www.jaided.ai/easyocr/)] to detect the subject ID in the upper part of each frame.
+> 3. If the subject ID gets detected, we go to step 4. Otherwise, we drop the frame and capture the next one.
+> 4. Utilize RetineFace[[Paper](https://arxiv.org/abs/1905.00641)][[Code](https://github.com/serengil/retinaface)] to 
+> crop the participants' facial images.
+> 5. For cropped images, calculate the area of detected faces and the Intersection over Union (IoU) of them. If `IoU < 0.05`, 
+> we kept the bigger face. Otherwise, drop both and go on.
+> 6. Manually delete the interviewers' faces.
+
+For the sake of taking advantage of videos thoroughly and predicting better, we select **K-fold Cross Validation**. 
+
+```tip
+$$K=\left \lfloor N_{Video}/L_{Fold} \right \rfloor$$,
+
+where $N_{Video}$ and $L_{Fold}$ are the video number of the selected theme and that of each fold. We set $L_{Fold}=3$.
+The videos in each fold belongs to different participants. 
+```
+
+this study used multi frames as the input. Thus, we cut each video into a certain number of fixed-length segments as inputs. 
+Let $L$ be the number of consecutive frames in a divided segment, $N$ represent the number of total frames. 
+$\left \lfloor N/L \right \rfloor$ is the number of segment for each video. 
+We also find that the participants usually behaved normally at the beginning. 
+Therefore, we deleted the first $N\%L$ frames, if $N\%L>0$.
