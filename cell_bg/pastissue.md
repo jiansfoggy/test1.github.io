@@ -40,7 +40,7 @@ TMSAU-Net, and three-stream network.
 sort of manual crafted statistics.
 - Film the **human reaction** to the certain questions and research the videos.
 
-The **drawbacks** of __the__ above:
+The **drawbacks** of the above:
 
 - Traditional ML algorithms are <u>weak</u> to extract complete and craft features. They also <u>rely on</u> the structured datasets, 
 which are not always easy to access.

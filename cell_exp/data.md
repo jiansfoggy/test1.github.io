@@ -1,5 +1,8 @@
 ---
 sort: 1
+
+images:
+  - https://github.com/jiansfoggy/test1.github.io/blob/develop/cell_strct/ViViT-TE.png
 ---
 
 # Dataset Introduction
@@ -53,17 +56,41 @@ To address this problem, we created the following cleaning instructions.
 > we kept the bigger face. Otherwise, drop both and go on.
 > 6. Manually delete the interviewers' faces.
 
+---
+
 For the sake of taking advantage of videos thoroughly and predicting better, we select **K-fold Cross Validation**. 
 
 ```tip
 $$K=\left \lfloor N_{Video}/L_{Fold} \right \rfloor$$,
 
-where $N_{Video}$ and $L_{Fold}$ are the video number of the selected theme and that of each fold. We set $L_{Fold}=3$.
+where $$N_{Video}$$ and $$L_{Fold}$$ are the video number of the selected theme and that of each fold. We set $$L_{Fold}=3$$.
 The videos in each fold belongs to different participants. 
 ```
 
-this study used multi frames as the input. Thus, we cut each video into a certain number of fixed-length segments as inputs. 
-Let $L$ be the number of consecutive frames in a divided segment, $N$ represent the number of total frames. 
-$\left \lfloor N/L \right \rfloor$ is the number of segment for each video. 
-We also find that the participants usually behaved normally at the beginning. 
-Therefore, we deleted the first $N\%L$ frames, if $N\%L>0$.
+---
+
+To catch temporal information, MC-ViViT uses sequentially multi frames as the input. 
+
+Let `L` be the number of consecutive frames in a divided segment, `N` represent the number of total frames.
+$$\left \lfloor N/L \right \rfloor$$ is the number of segments for each video.
+Thus, we cut each video into a certain number of fixed-length segments as inputs. 
+
+```tip
+Usually, L=16. It is validated in many related papers.
+```
+
+Then, the Tubelet Embedding divides each segment into small cubes, and changes the input unit from 2D patch to 3D cube, 
+which contains temporal information.
+
+{% for image in page.images %}
+**TubeLet Embedding**
+![TubeLet Embedding]({{ image }})
+{% endfor %}
+
+These cubic patches are non-overlapping. 
+If the tensor shape of one video clip is `[T,H,W,3]`, where `T` is the frame numbers, `H` and `W` are the height of 
+width of each frame, `3` represents the RGB channels. 
+Then, the tensor size of each cubic patch is `[t,h,w,3]`. 
+`t`, `h`, and `w` are the size of corresponding temporal, height, and width dimensions. 
+$$n_{t}=\lfloor\frac{T}{t}\rfloor$$, $$n_{h}=\lfloor\frac{H}{h}\rfloor$$, and $$n_{w}=\lfloor\frac{W}{w}\rfloor$$ denote 
+the token number of respective temporal, height, and width dimensions.
