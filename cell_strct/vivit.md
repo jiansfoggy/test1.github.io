@@ -47,8 +47,6 @@ $$\begin{align}
 \mathbf{y}^{l}_{FF} &= MLP(LN(\mathbf{y}^{l}_{FE})) + \mathbf{y}^{l}_{FE} \label{eq:fe.4}
 \end{align}$$
 
-
-
 <p align="center" width="100%">
     <img src="https://drive.google.com/file/d/1-Rq4p5DiyAx_UM9xvdOITj0OuqEP-9Ui/view?usp=sharing">
 </p>
