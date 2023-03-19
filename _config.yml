@@ -1,7 +1,8 @@
-title: jekyll-rtd-theme
-description: Just another documentation theme compatible with GitHub Pages
+title: MC-ViViT
+description: The document to introduce the MC-ViViT model.
 
-theme: null
+# theme: null
+theme: jekyll-rtd-theme
 
 # debug:
 #   compress: true
