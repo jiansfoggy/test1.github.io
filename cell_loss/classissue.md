@@ -65,3 +65,6 @@ The goal of typical methods is to achieve intra-class compactness and inter-clas
 In our study, we aim to draw a clear boundary instead of making them compact, even 
 if classifying the normal sequence as NC decreases the prediction accuracy of subjects with MCI. 
 ```
+
+In general, I-CONECT dataset is hard to train. Purely utilizing cross entropy loss is far from converging the MC-ViViT
+well. The Focal loss and AD-CORRE(FD) loss are powerful to address the imbalanced problem.
