@@ -16,7 +16,11 @@ In the original paper, there are four sort of Multi-Head Self-Attention (MHSA) m
 This work selected FE because ViViT-B/16×2 FE performed the best of all four versions of ViViT-B/16×2.
 ```
 
-![ViViT](./ViViT-FE.png 'Backbone')
+<p align="center" width="100%">
+    <img src="./ViViT-FE.png">
+</p>
+
+
 
 The figure shows that in ViViT, the Transformer Encoder takes the combined positional and embedded cubic tokens as input, 
 and it contains Self-Attention module followed by the FeedForward module. This formula presents the details of the input tokens.
@@ -54,11 +58,10 @@ $$\begin{align}
 
 
 
-<p align="center" width="100%">
-    <img src="./ViViT-FE.png">
-</p>
-
-{% for image in page.images %}
-Use the ViViT-FE backbone to extract the features from the tubelets.
-![test image {{ forloop.index }}]({{ image }})
-{% endfor %}
+```
+%![ViViT](./ViViT-FE.jpg 'Backbone')
+%{% for image in page.images %}
+%Use the ViViT-FE backbone to extract the features from the tubelets.
+%![test image {{ forloop.index }}]({{ image }})
+%{% endfor %}
+```

@@ -13,7 +13,9 @@ In our study, MC only does linear projection at each branch instead of convoluti
 although it can be Conv $$1\times 1$$.
 ```
 
-![Multi-branch Classifier](ViViT-AMLP.png)
+<p align="center" width="100%">
+    <img src="./ViViT-AMLP.png">
+</p>
 
 The dimension change is `64` $$\rightarrow$$ `16` $$\rightarrow$$ `[8,8,8,8]` $$\rightarrow$$ concatenate to `32` 
 $$\rightarrow$$ `num\_class`, where `num\_class` represents the number of class. 
@@ -27,3 +29,4 @@ The multi-branch structure broadens the network.
 MC can provide more features and view the object from different angles.
 ```
 
+![Multi-branch Classifier](ViViTT-AMLP.jpg)
