@@ -28,5 +28,3 @@ Then, we concantenate them as a `32`-dimensional tensor.
 The multi-branch structure broadens the network. 
 MC can provide more features and view the object from different angles.
 ```
-
-![Multi-branch Classifier](ViViTT-AMLP.jpg)

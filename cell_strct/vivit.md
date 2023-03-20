@@ -55,13 +55,3 @@ $$\begin{align}
 \mathbf{y}^{l}_{FE} &= \mathbf{y}^{l}_{t} + \mathbf{z}^{l} \label{eq:fe.3}\\
 \mathbf{y}^{l}_{FF} &= MLP(LN(\mathbf{y}^{l}_{FE})) + \mathbf{y}^{l}_{FE} \label{eq:fe.4}
 \end{align}$$
-
-
-
-```
-%![ViViT](./ViViT-FE.jpg 'Backbone')
-%{% for image in page.images %}
-%Use the ViViT-FE backbone to extract the features from the tubelets.
-%![test image {{ forloop.index }}]({{ image }})
-%{% endfor %}
-```

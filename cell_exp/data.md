@@ -94,11 +94,6 @@ which contains temporal information.
 
 ![ViViT](./ViViT-TE.png 'Backbone')
 
-{% for image in page.images %}
-**TubeLet Embedding**
-![TubeLet Embedding]({{ image }})
-{% endfor %}
-
 These cubic patches are non-overlapping. 
 If the tensor shape of one video clip is `[T,H,W,3]`, where `T` is the frame numbers, `H` and `W` are the height of 
 width of each frame, `3` represents the RGB channels. 
