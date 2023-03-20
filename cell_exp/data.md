@@ -92,6 +92,8 @@ Usually, L=16. It is validated in many related papers.
 The Tubelet Embedding divides each segment into small cubes, and changes the input unit from 2D patch to 3D cube, 
 which contains temporal information.
 
+![ViViT](./ViViT-TE.png 'Backbone')
+
 {% for image in page.images %}
 **TubeLet Embedding**
 ![TubeLet Embedding]({{ image }})
