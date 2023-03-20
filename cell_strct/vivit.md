@@ -9,8 +9,12 @@ images:
 # Video Vision Transformer (ViViT)
 
 We select ViViT-B/16×2 FE (A ViT-Base backbone with a tubelet size of $$h\times w\times t = 16\times16\times2$$, 
-FE represents factorised encoder) as the backbone of our model. In the original paper, ViViT-B/16×2 FE performed the best
-among all four versions of ViViT-B/16×2 (TE, FE, TFE, and FTE).
+FE represents factorised encoder) as the backbone of our model. 
+
+```note
+In the original paper, there are four sort of Multi-Head Self-Attention (MHSA) modules (TE, FE, TFE, and FTE).
+This work selected FE because ViViT-B/16×2 FE performed the best of all four versions of ViViT-B/16×2.
+```
 
 ![ViViT](./ViViT_FE.png 'Backbone')
 
@@ -28,14 +32,15 @@ $$d$$ is the dimension of the embedded token.
 Given the layer `l`, the Self-Attention module consists of Layer Normalization (LN) and Multi-Head Dot-Product Attention, 
 while the FeedForward (FF) module includes LN and MLP. 
 Both modules use skip-connection to enrich features and prevent gradient vanish. 
-Moreover, Arnab _et al_. proposed four Multi-Head Self-Attention (MHSA) modules. 
-This work selected FE because Arnab _et al_. showed that ViViT FE performed the best of all four versions. 
-Equation. 3 shows that FE has two parts, Spatial Transformer Encoder ($$L_{s}$$) and Temporal Transformer Encoder ($$L_{t}$$). 
-Spatial Transformer Encoder extracts the latent representations on the same patch with certain temporal index. 
-Therefore, these latent representations are spatial features. 
-Then, these latent representations with different temporal index come to the Temporal Transformer Encoder, which studies 
-the interactions between latent representations cross different time steps. 
-Thus, Temporal Transformer Encoder can mine temporal features. 
+The follow Equation shows that FE has two parts, Spatial Transformer Encoder ($$L_{s}$$) and Temporal Transformer Encoder ($$L_{t}$$). 
+
+```note
+- Spatial Transformer Encoder extracts the latent representations on the different patch with certain temporal index, called
+spatial features.  
+- Temporal Transformer Encoder studies the interactions between latent representations cross different time steps on the
+same patch, called temporal features. 
+```
+
 Assuming that the $$L_{s}$$ and $$L_{t}$$ repeats $$n_{sp}$$ and $$n_{tp}$$ times. 
 FF processes the output of FE and returns Sequence-Level Spatio-Temporal feature. 
 The above explanation can be summarized as the follows.
@@ -46,6 +51,8 @@ $$\begin{align}
 \mathbf{y}^{l}_{FE} &= \mathbf{y}^{l}_{t} + \mathbf{z}^{l} \label{eq:fe.3}\\
 \mathbf{y}^{l}_{FF} &= MLP(LN(\mathbf{y}^{l}_{FE})) + \mathbf{y}^{l}_{FE} \label{eq:fe.4}
 \end{align}$$
+
+
 
 <p align="center" width="100%">
     <img src="https://drive.google.com/file/d/1-Rq4p5DiyAx_UM9xvdOITj0OuqEP-9Ui/view?usp=sharing">

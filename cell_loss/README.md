@@ -18,5 +18,3 @@ AD-CORRE(FD) is the FD (Feature Discriminator) component of AD-CORRE Loss.
 ```
 
 {% include list.liquid all=true %}
-
-HP Loss has two components, Focal Loss and AD-CORRE(FD).

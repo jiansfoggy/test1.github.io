@@ -17,19 +17,27 @@ prophylaxis of memory decline and dementia.
 Website:[https://www.i-conect.org/](https://www.i-conect.org/)
 ```
 
-I-CONECT was to explore how social conversation can help improve memory and may prevent dementia or Alzheimer’s disease 
-in older adults. In this study, it followed research participants over the age of 75 in the Portland, Atlanta or Detroit
-metro areas for about six months. All participants connected with the research team using senior-friendly technology for 
-fun and engaging conversations in the comfort of their own home over a period of 6 months. I-CONECT Study convened 187 
-participants and recruited different study team members to do 30-minute long chats with them 4 times a week for 6 months.
-86 participants are labeled as NC, while 101 people are marked as MCI. Participants had conversation about 161 themes, 
-such as SummerTime, HealthCare, Military Service, Television Technology, etc. The answers were filmed as a video. In each 
-video, it starts with casual chatting, then formally shares story based on given theme, finally stops the interview by 
-casual chatting again. The middle part contains more valuable features than the beginning and the ending parts. 
+```note
+- **I-CONECT Study** was to explore how social conversation can help improve memory and may prevent dementia or Alzheimer’s disease 
+in older adults. 
+- It followed research participants over the age of 75 in the Portland, Atlanta or Detroit
+metro areas for about six months. 
+- I-CONECT Study totally convened 187 participants and recruited different study team members to do 30-minute long chats with them 
+4 times a week.
+- All participants connected with the research team using senior-friendly technology for 
+fun and engaging conversations in the comfort of their own home over a period of 6 months. 
+```
 
-The follows are the details of researched themes. Subject Number is the total number of videos in the corresponding theme. Male/Female 
-and MCI/NC shows the gender distribution and the category distribution. Frame Number is the total image number of each 
-theme after converting from videos to frames.
+In I-CONECT Study, 86 participants are labeled as NC, while 101 people are marked as MCI. Participants had conversation 
+about 161 themes, such as SummerTime, HealthCare, Military Service, Television Technology, etc. 
+The answers were filmed as a video. 
+In each video, it starts with casual chatting, then formally shares story based on given theme, finally stops 
+the interview by casual chatting again. 
+The middle part contains more valuable features than the beginning and the ending parts. 
+
+The follows are the details of researched themes. Subject Number is the total number of videos in the corresponding theme. 
+Male/Female and MCI/NC shows the gender distribution and the category distribution. 
+Frame Number is the total image number of each theme after converting from videos to frames.
 
 |                | Crafts Hobbies | Day Time TV Shows | Movie Genres | School Subjects |
 |----------------|----------------|-------------------|--------------|-----------------|
@@ -79,7 +87,9 @@ Thus, we cut each video into a certain number of fixed-length segments as inputs
 Usually, L=16. It is validated in many related papers.
 ```
 
-Then, the Tubelet Embedding divides each segment into small cubes, and changes the input unit from 2D patch to 3D cube, 
+---
+
+The Tubelet Embedding divides each segment into small cubes, and changes the input unit from 2D patch to 3D cube, 
 which contains temporal information.
 
 {% for image in page.images %}
