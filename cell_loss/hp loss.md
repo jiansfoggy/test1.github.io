@@ -12,4 +12,8 @@ HP\ Loss = FL(p_{mci})+\lambda*AD-CORRE(FD) \label{eq:HPLoss}
 
 where $$\lambda=0.5$$ follows the pattern of AD-CORRE Loss.
 
-remember to add contribution
+# Contribution on the Loss Function
+
+We develop the HP loss by combining Focal loss and AD-CORRE(FD). 
+The HP loss addresses the inter- and intra-class imbalanced issues and helps the model pay attention on classes with 
+less samples and subjects with short video length.
