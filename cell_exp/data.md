@@ -92,7 +92,9 @@ Usually, L=16. It is validated in many related papers.
 The Tubelet Embedding divides each segment into small cubes, and changes the input unit from 2D patch to 3D cube, 
 which contains temporal information.
 
-![ViViT](./ViViT-TE.png 'Backbone')
+<p align="center" width="100%">
+    <img src="./ViViT-TE.png">
+</p>
 
 These cubic patches are non-overlapping. 
 If the tensor shape of one video clip is `[T,H,W,3]`, where `T` is the frame numbers, `H` and `W` are the height of 
