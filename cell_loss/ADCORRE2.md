@@ -2,9 +2,9 @@
 sort: 4
 ---
 
-# AD-CORRE(FD) Loss 2 -- Main
+# AD-CORRE(FD) Loss 2 -- All For One
 
-After learning the symbols, let's see the main body.
+After learning the four key components, let's see the main body.
 
 In short word, AD-CORRE(FD) is a weighted mean absolute error. 
 
