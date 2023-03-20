@@ -2,7 +2,7 @@
 sort: 3
 ---
 
-# AD-CORRE (FD) Loss 1 -- Symbols
+# AD-CORRE(FD) Loss 1 -- Symbols
 
 Let $$k$$ be the number of embedding features, and $$n$$ is class number. 
 Let $$\beta\in \mathbb{R}^{n\times n}$$, it represents the difference between matrix of ones $$1_{n\times n}$$ and 

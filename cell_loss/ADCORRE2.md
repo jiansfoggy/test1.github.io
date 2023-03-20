@@ -7,8 +7,9 @@ sort: 4
 After learning the symbols, let's see the main body.
 
 In short word, AD-CORRE(FD) is a weighted mean absolute error. 
+
 $$ \begin{equation}\label{eq:fd}
-FD = \frac{1}{kn^{2}}\displaystyle\sum\limits_{l=0}^k\displaystyle\sum\limits_{i=0}^n\displaystyle\sum\limits_{j=0}^n \beta[i,j]\Omega[i,j]|\Phi[i,j]-CORM_{l}[i,j]| 
+FD = \frac{1}{kn^{2}}\displaystyle\sum\limits_{l=0}^k\displaystyle\sum\limits_{i=0}^n\displaystyle\sum\limits_{j=0}^n \beta[i,j]\Omega[i,j]|\Phi[i,j]-CORM_{l}[i,j]|, 
 \end{equation} $$
 
 where $$l_{i}$$ is the label of $$i^{th}$$ sample, the weight factor $$\omega_{l_{i}}$$ is from the training confusion 
