@@ -12,12 +12,12 @@ sort: 5
 
 **Paper Goal**: Propose MC-ViViT to detect MCI from NC via the facial videos of the interviews (I-CONECT dataset).
 
-The experiments show that MC-ViViT can predict well with the help of MC and HP Loss. 
+**Components' Performance**: The experiments show that MC-ViViT can predict well with the help of MC and HP Loss. 
 
 **Good news**: Transformer-based model can tell whether or not the people have MCI merely by analyzing the casual 
 chatting videos. 
 
-The interview videos from I-CONECT Study is **easy to access**, **low cost**, **time-saving**, **flexible**, and 
+**Data's Plus Point**: The interview videos from I-CONECT Study is **easy to access**, **low cost**, **time-saving**, **flexible**, and 
 **less restricted** than medical images (MRI and CT Scan), collected demographic information, the answers for the 
 specific questions. 
 

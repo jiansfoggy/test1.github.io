@@ -11,3 +11,5 @@ HP\ Loss = FL(p_{mci})+\lambda*AD-CORRE(FD) \label{eq:HPLoss}
 \end{equation} $$
 
 where $$\lambda=0.5$$ follows the pattern of AD-CORRE Loss.
+
+remember to add contribution
