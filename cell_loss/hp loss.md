@@ -14,6 +14,9 @@ where $$\lambda=0.5$$ follows the pattern of AD-CORRE Loss.
 
 # Contribution on the Loss Function
 
-We develop the HP loss by combining Focal loss and AD-CORRE(FD). 
+- We develop the HP loss by combining Focal loss and AD-CORRE(FD). 
+
+```note
 The HP loss addresses the inter- and intra-class imbalanced issues and helps the model pay attention on classes with 
 less samples and subjects with short video length.
+```

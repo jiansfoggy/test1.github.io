@@ -21,6 +21,7 @@ $$ \begin{equation}
 \end{equation} $$
 
 $$\beta_{n\times n}$$ sets the diagonal of the correlation matrix to zero and remove the influence of variance.
+To be shorter, we rename $$\beta_{n\times n}$$ as the variance eraser.
 
 ## Attention Map Matrix, $$\Omega_{n\times n}$$
 

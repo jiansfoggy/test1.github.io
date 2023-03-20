@@ -12,10 +12,7 @@ $$ \begin{equation}\label{eq:fd}
 FD = \frac{1}{kn^{2}}\displaystyle\sum\limits_{l=0}^k\displaystyle\sum\limits_{i=0}^n\displaystyle\sum\limits_{j=0}^n \beta[i,j]\Omega[i,j]|\Phi[i,j]-CORM_{l}[i,j]|, 
 \end{equation} $$
 
-where $$l_{i}$$ is the label of $$i^{th}$$ sample, the weight factor $$\omega_{l_{i}}$$ is from the training confusion 
-matrix CONFM$$[l_{i},l_{i}]$$. $$\omega_{l_{i}}$$ pushes the model to notice the class with less samples. 
-Then, $$\Phi_{n\times n}$$ represents the difference of ground truth values between any two samples, while 
-CORM$$_{n\times n}$$ is the correlation matrix of all embedding features. 
+where $$k$$ is the class number. 
 The difference between $$\Phi_{n\times n}$$ and CORM$$_{n\times n}$$ is the core of the AD-CORRE(FD) loss.
 
 In general, AD-CORRE(FD) focuses on the correlation between the samples within the mini-batch. 
