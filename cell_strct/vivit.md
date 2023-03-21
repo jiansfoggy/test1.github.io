@@ -39,10 +39,10 @@ Both modules use skip-connection to enrich features and prevent gradient vanish.
 The follow Equation shows that FE has two parts, Spatial Transformer Encoder ($$L_{s}$$) and Temporal Transformer Encoder ($$L_{t}$$). 
 
 ```note
-- Spatial Transformer Encoder extracts the latent representations on the different patch with certain temporal index, called
-spatial features.  
-- Temporal Transformer Encoder studies the interactions between latent representations cross different time steps on the
-same patch, called temporal features. 
+- Spatial Transformer Encoder extracts the latent representations on the different tokens with the same temporal index, 
+called spatial features.  
+- Temporal Transformer Encoder studies the interactions between latent representations from different time steps, 
+called temporal features. 
 ```
 
 Assuming that the $$L_{s}$$ and $$L_{t}$$ repeats $$n_{sp}$$ and $$n_{tp}$$ times. 
