@@ -14,7 +14,7 @@ although it can be Conv $$1\times 1$$.
 ```
 
 <p align="center" width="100%">
-    <img src="./ViViT-AMLP.png">
+    <img src="./ViViT-MC.png">
 </p>
 
 The dimension change is `64` $$\rightarrow$$ `16` $$\rightarrow$$ `[8,8,8,8]` $$\rightarrow$$ concatenate to `32` 
