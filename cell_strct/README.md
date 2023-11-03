@@ -11,4 +11,4 @@ This section is to introduce the architecture of MC-ViViT. It incudes the follow
 
 {% include list.liquid all=true %}
 
-![MC-ViViT Architecture](ViViT-AM.png "MC-ViViT Architecture")
+![MC-ViViT Architecture](ViViT-ALL.png "MC-ViViT Architecture")
